@@ -15,7 +15,6 @@ Currently, you are able to create a network and run a feedforward using sigmoid
 &nbsp;
 
 ## Example Use
-&nbsp;
 
 ```
 user@hostname:~/Neural-Network-From-Scratch$ python3 -i network.py
