@@ -23,11 +23,13 @@ class NNetwork:
         self.in_layer = Layer(self.input,hid_shape)
         self.layers.append(self.in_layer)
         self.hidden_layers = []
+
         for _ in range(self.num_hidden - 1):
             self.hidden_layers.append(Layer(np.empty(hid_shape),hid_shape2))
             hid_shape = hid_shape2
             hid_shape2 = self.hidden_shapes.popleft() \
                              if self.hidden_shapes else hid_shape
+
         if self.num_hidden > 1:
             self.hidden_layers.append(Layer(np.empty(hid_shape2),
                                                 self.out_shape))
